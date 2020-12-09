@@ -98,6 +98,9 @@
     	li $v0, 0
         la $t4, error_message
         j end_string
+    not_a_number:
+        li $v0, 0
+        la $t4, error_message
 
 
 
