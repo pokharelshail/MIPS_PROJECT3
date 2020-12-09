@@ -27,8 +27,8 @@
     	la $a0, ($s1)  #load arguments
         la $a1, ($s2)
         
-        #jal SubprogramA
-        #jal SubprogramB
+        jal SubprogramA
+        jal SubprogramB
         beq $t2, 0, new_line
         beq $t2, 10, new_line
 
