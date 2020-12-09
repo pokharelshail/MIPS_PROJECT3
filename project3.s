@@ -101,6 +101,13 @@
     not_a_number:
         li $v0, 0
         la $t4, error_message
+    end_string:
+    	#load the stack with return values
+        addi $sp, $sp, -4
+        sw $t4, ($sp)
+        addi $sp, $sp, -4
+        sw $v0, ($sp)
+
 
 
 
