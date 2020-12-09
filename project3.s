@@ -1,3 +1,5 @@
+#SHREESHAIL POKHAREL @02931612
+#BASE 28 CONVERSIONS 
 .data
 	input: .space 1000
 	error_message: .asciiz "Nan"
