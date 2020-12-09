@@ -16,7 +16,15 @@
     	la $s1, ($s2) #make data itteratable by string
 
     substring:
-    	add $t1, $s0, $s2           #iterator taking the pointers sum
-        lb $t2, 0($t1)    #loading the current character
-      	beq $t2, 0, end_of_substring #a few criteron to exit the loop while iterating through the substrings
+    	add $t1, $s0, $s2           
+        lb $t2, 0($t1)    #current letter
+      	beq $t2, 0, end_of_substring 
         beq $t2, 10, end_of_substring
+        beq $t2, 44, end_of_substring
+        add $s2, $s2, 1    #i++
+        j substring
+    end_of_substring:
+    	la $a0, ($s1)  #load arguments
+        la $a1, ($s2)
+
+
