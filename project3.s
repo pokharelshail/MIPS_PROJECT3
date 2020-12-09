@@ -93,6 +93,11 @@
     	bgt $s6, 4, number_excess #if length of a valid string is greater than 4, then it's TOO large to deal with
         li $v0, 1
          j end_string
+    number_excess:
+         #check if input > 4 chars
+    	li $v0, 0
+        la $t4, error_message
+        j end_string
 
 
 
