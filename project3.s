@@ -142,6 +142,11 @@
     	mfhi $a0
         syscall
         j exit
+    must_change:#code for invalid characters
+    	li $v0, 4
+    	la $a0, ($t7)
+        syscall
+
 
 
 
