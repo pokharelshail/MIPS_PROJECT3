@@ -87,6 +87,12 @@
         sub $t6, $t5, $v1
         add $t4, $t4, $t6
         addi $s6, $s6, 1
+        addi $t9, $t9, 1
+        j baseconvert
+    end_baseconvert:
+    	bgt $s6, 4, number_excess #if length of a valid string is greater than 4, then it's TOO large to deal with
+        li $v0, 1
+         j end_string
 
 
 
