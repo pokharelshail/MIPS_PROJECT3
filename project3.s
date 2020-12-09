@@ -119,6 +119,10 @@
         blt $a0, 97, invalid
         addi $v1, $0, 87    #R
         ble $a0, 114, valid  #r
+        bgt $a0, 114, invalid 
+    valid:
+    	li $v0, 1  #loading the number for valid and invalid
+        jr $ra
 
 
 
