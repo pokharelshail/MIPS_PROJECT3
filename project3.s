@@ -123,6 +123,9 @@
     valid:
     	li $v0, 1  #loading the number for valid and invalid
         jr $ra
+    invalid:
+        li $v0, 0
+        jr $ra
 
 
 
