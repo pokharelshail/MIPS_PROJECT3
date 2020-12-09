@@ -65,6 +65,11 @@
         lb $t5, ($t6)
         beq $t5, 32, down #move down the dataset and moving through each word until 4*8 characters are processed
         beq $t5, 9, down
+        j end_deletion
+    down:
+    	addi $t8, $t8, -1
+        j rewind
+    end_deletion:
 
 
 
