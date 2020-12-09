@@ -73,6 +73,10 @@
     	beq $t9, $t8, not_a_number #if string is empty  then print NaN
         li $t4, 0
         li $s6, 0   #len
+    baseconvert:
+    	beq $t9, $t8, end_baseconvert 
+        lb $t5, ($t6)
+        la $a0, ($t5)
 
 
 
