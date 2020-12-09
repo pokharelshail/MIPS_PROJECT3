@@ -131,6 +131,10 @@
     	lw $t8, ($sp)  #load the arguments from the stack
         addi $sp, $sp, 4
         lw $t7, ($sp)
+        eq $t8, 0, must_change #if $t8 equals 0, the string is not valid
+        li $t6, 10  #
+        divu $t7, $t6
+        li $v0, 1
 
 
 
