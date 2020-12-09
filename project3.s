@@ -2,7 +2,7 @@
 #BASE 28 CONVERSIONS 
 .data
 	input: .space 1000
-	error_message: .asciiz "Nan"
+	error_message: .asciiz "NaN"
 .text
 	main:
 	#take User Input
