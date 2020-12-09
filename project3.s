@@ -107,6 +107,8 @@
         sw $t4, ($sp)
         addi $sp, $sp, -4
         sw $v0, ($sp)
+        la $ra, ($s7)
+        jr $ra
 
 
 
