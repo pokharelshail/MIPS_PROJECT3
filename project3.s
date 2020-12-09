@@ -48,6 +48,12 @@
 
       addi $t8, $a1, 0  #store the end address
       la $t7, input
+    space_check:
+    	beq $t9, $t8, end_deletion  #This will check for the empty substrings or exit the loop after spotting one.
+        add $t6, $t7, $t9
+        lb $t5, ($t6)       
+    	beq $t5, 32, add_for_loop  #load the first word from the substring
+        #beq $t5, 9, add_for_loop
 
 
 
