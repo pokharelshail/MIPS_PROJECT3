@@ -114,6 +114,11 @@
         addi $v1, $0, 48  #storing the ascii value to $v1
         blt $a0, 58, valid  #Value 0-9 is valid
         blt $a0, 65, invalid #invalid if the character is less than "A" in the ascii table
+        addi $v1, $0, 55
+        ble $a0, 82, valid 
+        blt $a0, 97, invalid
+        addi $v1, $0, 87    #R
+        ble $a0, 114, valid  #r
 
 
 
