@@ -60,6 +60,11 @@
     	j space_check
     rewind:
     	beq $t9, $t8, end_deletion
+    	add $t6, $t7, $t8
+        addi $t6, $t6, -1
+        lb $t5, ($t6)
+        beq $t5, 32, down #move down the dataset and moving through each word until 4*8 characters are processed
+        beq $t5, 9, down
 
 
 
