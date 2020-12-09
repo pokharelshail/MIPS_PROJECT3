@@ -135,6 +135,9 @@
         li $t6, 10  #
         divu $t7, $t6
         li $v0, 1
+        mflo $a0
+        beq $a0, 0, v_flag # if overflow
+        syscall
 
 
 
