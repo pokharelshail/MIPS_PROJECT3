@@ -33,5 +33,10 @@
         beq $t2, 10, new_line
 
         addi $s2, $s2, 1#itterate
+        li $v0, 11 #format values returned from a subprogram
+        li $a0, 44
+        syscall
+        j dataset
+
 
 
