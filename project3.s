@@ -26,5 +26,12 @@
     end_of_substring:
     	la $a0, ($s1)  #load arguments
         la $a1, ($s2)
+        
+        #jal SubprogramA
+        #jal SubprogramB
+        beq $t2, 0, new_line
+        beq $t2, 10, new_line
+
+        addi $s2, $s2, 1#itterate
 
 
