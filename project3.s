@@ -127,6 +127,11 @@
         li $v0, 0
         jr $ra
 
+    SubprogramB: #check overflow
+    	lw $t8, ($sp)  #load the arguments from the stack
+        addi $sp, $sp, 4
+        lw $t7, ($sp)
+
 
 
 
