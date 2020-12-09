@@ -138,6 +138,11 @@
         mflo $a0
         beq $a0, 0, v_flag # if overflow
         syscall
+    v_flag:
+    	mfhi $a0
+        syscall
+        j exit
+
 
 
 
