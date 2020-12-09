@@ -41,7 +41,13 @@
     new_line:
     	li $v0, 10
     	syscall
+    
     SubprogramA:
+      la $s7, ($ra) #load  value from $ra to register $s7
+      la $t9, ($a0) #loading  value from $a0 to register $t9
+
+      addi $t8, $a1, 0  #store the end address
+      la $t7, input
 
 
 
