@@ -37,7 +37,11 @@
         li $a0, 44
         syscall
         j dataset
-        new_line:
+
+    new_line:
+    	li $v0, 10
+    	syscall
+    SubprogramA:
 
 
 
