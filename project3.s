@@ -57,6 +57,9 @@
         j rewind
     go_for_loop:
     	addi $t9, $t9, 1
+    	j space_check
+    rewind:
+    	beq $t9, $t8, end_deletion
 
 
 
