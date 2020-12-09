@@ -78,10 +78,15 @@
     	add $t6, $t7, $t9
         lb $t5, ($t6)
         la $a0, ($t5)
+        #check if the number is valid in our base system and then baseconverts using subprogram
         jal SubprogramC  
         bne $v0, 0, continue
         j not_a_number
     continue:
+    	mul $t4, $t4, 28  #Multiplying by 28 because of  base 28
+        sub $t6, $t5, $v1
+        add $t4, $t4, $t6
+        addi $s6, $s6, 1
 
 
 
