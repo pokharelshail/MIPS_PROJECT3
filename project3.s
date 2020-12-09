@@ -11,3 +11,8 @@
         la $s0, input   #load input to register
         li $s1, 0    #The pointer where it begins
         li $s2, 0  #Pointer where it ends
+    
+    dataset: 
+    	la $s1, ($s2) #make data itteratable by string
+
+    substring:
