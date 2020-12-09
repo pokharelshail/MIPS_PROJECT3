@@ -75,8 +75,13 @@
         li $s6, 0   #len
     baseconvert:
     	beq $t9, $t8, end_baseconvert 
+    	add $t6, $t7, $t9
         lb $t5, ($t6)
         la $a0, ($t5)
+        jal SubprogramC  
+        bne $v0, 0, continue
+        j not_a_number
+    continue:
 
 
 
