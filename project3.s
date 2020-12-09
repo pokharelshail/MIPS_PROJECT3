@@ -109,6 +109,11 @@
         sw $v0, ($sp)
         la $ra, ($s7)
         jr $ra
+    SubprogramC:
+    	blt $a0, 48, invalid  #invaild if ascii value is less than 48, ascii value of 0 is 48
+        addi $v1, $0, 48  #storing the ascii value to $v1
+        blt $a0, 58, valid  #Value 0-9 is valid
+        blt $a0, 65, invalid #invalid if the character is less than "A" in the ascii table
 
 
 
